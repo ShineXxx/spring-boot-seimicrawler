@@ -1,4 +1,4 @@
-package cn.shine.seimi.config.mybatisplus;
+package cn.shine.config;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
@@ -59,7 +59,7 @@ public class Generator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/books?&characterEncoding=utf8&useSSL=false&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/welinkdev?&characterEncoding=utf8&useSSL=false&serverTimezone=UTC");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
@@ -82,7 +82,7 @@ public class Generator {
 //        pc.setModuleName(scanner("模块名"));
 //        String packgeName = scanner("包名");
         String packgeName = "";
-        pc.setParent("cn.shine.seimi");
+        pc.setParent("cn.shine");
         pc.setController("controller"+packgeName);
         pc.setEntity("domain" + packgeName);
         pc.setService("service" + packgeName);
@@ -144,11 +144,11 @@ public class Generator {
 //        strategy.setSuperEntityColumns("id");
 //        strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
         strategy.setInclude(("" +
-                "javbooks_movie," +
-                "javbooks_imges" +
+                "welinkaccount," +
+//                "javbooks_imges" +
                 "").split(","));
         strategy.setControllerMappingHyphenStyle(true);
-        strategy.setTablePrefix("javbooks_");
+        strategy.setTablePrefix("");
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         mpg.execute();

@@ -26,8 +26,6 @@ open class ${table.serviceImplName} : ${superServiceImplClass}<${table.mapperNam
 }
 <#else>
 public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> implements ${table.serviceName} {
-    //@Autowired
-    //private ${table.mapperName} ${(table.mapperName)?uncap_first};
 
     @Override
     public  IPage<${entity}> findListByPage(Integer page, Integer pageCount){

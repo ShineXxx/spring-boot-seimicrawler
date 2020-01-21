@@ -37,7 +37,4 @@
 
     </#if>
 
-    <select id="selectPageVo" resultMap="BaseResultMap">
-        SELECT * FROM javbooks_movie
-    </select>
 </mapper>

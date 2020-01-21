@@ -17,6 +17,6 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 interface ${table.mapperName} : ${superServiceClass}<${entity}>
 <#else>
 public interface ${table.mapperName} extends BaseMapper<${entity}> {
-    IPage<${entity}> selectPageVo(Page page);
+
 }
 </#if>

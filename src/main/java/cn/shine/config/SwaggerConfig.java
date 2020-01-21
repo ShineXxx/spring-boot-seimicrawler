@@ -1,4 +1,4 @@
-package cn.shine.seimi.config;
+package cn.shine.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -18,7 +18,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("cn.wanghaomiao.seimi.controller"))
+                .apis(RequestHandlerSelectors.basePackage("cn.shine.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
