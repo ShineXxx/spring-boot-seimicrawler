@@ -6,11 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-//Spring boot方式
 //分页插件
-@EnableTransactionManagement
 @Configuration
-@MapperScan("cn.shine.seimi.dao.*")
 public class MybatisPlusConfig {
 
     @Bean

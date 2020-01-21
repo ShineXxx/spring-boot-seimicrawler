@@ -27,7 +27,6 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("title")
                 .description("desc")
-                .contact("程序猿")
                 .version("1.0")
                 .build();
     }
