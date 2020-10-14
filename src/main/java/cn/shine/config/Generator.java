@@ -82,12 +82,12 @@ public class Generator {
 //        pc.setModuleName(scanner("模块名"));
 //        String packgeName = scanner("包名");
         String packgeName = "";
-        pc.setParent("cn.shine");
+        pc.setParent("com.seassoon.dataquery");
         pc.setController("controller"+packgeName);
-        pc.setEntity("domain" + packgeName);
+        pc.setEntity("entity" + packgeName);
         pc.setService("service" + packgeName);
         pc.setServiceImpl("service" + packgeName +".impl");
-        pc.setMapper("dao" + packgeName);
+        pc.setMapper("mapper" + packgeName);
         mpg.setPackageInfo(pc);
 
         // 自定义配置

@@ -1,0 +1,52 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/pudong_psdc?characterEncoding=utf8&useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    druid:
+      async-init: true
+      filters: stat,wall,slf4j
+      initial-size: 3
+      min-idle: 5
+      max-active: 10
+      max-wait: 10000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      pool-prepared-statements: true
+      min-evictable-idle-time-millis: 3000
+      time-between-eviction-runs-millis: 3000
+#      validation-query: SELECT 1
+      query-timeout: 3000
+      keep-alive: true
+      web-stat-filter:
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+
+# logback set path
+logging:
+#  config: classpath:logback/logback.xml
+#  path: ./log/center-service
+#  file:
+#    max-history: 90
+  level:
+    root: INFO
+    com.seassoon.center: DEBUG
+
+oss:
+  remote: http://192.168.2.195:9000/
+  appid: oss541s7q
+  appsecret: 7sogi25a
+  projectcode: sjtu_image
+  temp: ./center-service/temp/
+#global:
+#  oss:
+#    accessKeyId: 'FdYBFKdD6ard/OXRKxHfCA'
+#    accessKeySecret: 'HS0Kb4U3ELrc7Z/6rRbwRm05Bkc5ytG'
+#    serverHost: 10.50.5.28:8077
+#    bucket: pd-ai2-dev
+#  scanImgSaveRootPath:  /ai2-scan

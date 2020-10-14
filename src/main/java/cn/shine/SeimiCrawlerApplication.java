@@ -1,15 +1,11 @@
 package cn.shine;
-import	java.util.Arrays;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -17,11 +13,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Collections;
 
 @Slf4j
 @SpringBootApplication
-@MapperScan("cn.shine.dao")
+@MapperScan("cn.shine.mapper")
 public class SeimiCrawlerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SeimiCrawlerApplication.class, args);
